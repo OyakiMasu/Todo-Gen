@@ -35,11 +35,9 @@ code {
   color: var(--colorSix);
   padding-left: 20;
   
-  
-  
 }
 
-.navbar  a {
+.nav-bar  a {
   color: var(--colorSix);
   text-decoration: none;
   margin-right: 1%;
