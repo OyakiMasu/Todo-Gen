@@ -1,11 +1,13 @@
 import React from "react";
 import Navbar from "./Navbar";
+import Todos from "./Todos";
 
 function Home(){
     return(
     <div className="home">
     <Navbar/>
-        <p> Hello Home</p>
+    <Todos/>
+        {/* <p> Hello Home</p> */}
     </div>
     )
 }
