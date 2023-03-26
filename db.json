@@ -19,6 +19,16 @@
       "title": "Add a Todo",
       "completed": false,
       "id": 4
+    },
+    {
+      "title": "Update a Todo",
+      "completed": false,
+      "id": 5
+    },
+    {
+      "title": "Delete a Todo",
+      "completed": false,
+      "id": 6
     }
   ]
 }

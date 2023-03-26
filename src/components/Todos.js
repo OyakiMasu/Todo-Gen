@@ -3,7 +3,8 @@ import React, { useEffect, useState } from "react";
 function Todos(){
     const [todos, setTodos] = useState([]);
     const [todo, setTodo] = useState('');
-
+    
+    // List All Todos
     useEffect(() => {
         fetch(' http://localhost:3001/todos')
         .then(response => response.json())
@@ -11,6 +12,7 @@ function Todos(){
         .catch(error => console.error(error))
     }, []);
 
+    // Add A Todo
     const handleAddTodo = event => {
         event.preventDefault();
         console.log('Adding todo:', todo);
@@ -33,6 +35,17 @@ function Todos(){
           .catch(error => console.error(error));
       };
 
+    // Delete A Todo
+    const handleDeleteTodo = id => {
+        fetch(`http://localhost:3001/todos${id}`, {
+          method: 'DELETE'
+        })
+        .then(() => {
+            setTodos(todos.filter(todo => todo.id !== id));
+        })
+        .catch(error => console.error(error));
+    };
+
     return (
         <div className="todos">
             <h1>Todo List</h1>
@@ -47,7 +60,15 @@ function Todos(){
         </form>
         <ul>
             {todos.map(todo => (
-            <li key={todo.id}>{todo.title}</li>
+            <li key={todo.id}>{todo.title}
+            {/* <input
+            type="checkbox"
+            checked={todo.completed}
+            onChange={() => handleUpdateTodo(todo.id, { ...todo, completed: !todo.completed })}
+          /> */}
+        {todo.todo}
+        <button onClick={() => handleDeleteTodo(todo.id)}>Delete</button>
+          </li>
             ))}
         </ul>
         </div>
