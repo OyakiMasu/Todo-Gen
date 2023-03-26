@@ -5,7 +5,7 @@ function Todos(){
     const [todo, setTodo] = useState('');
 
     useEffect(() => {
-        fetch('http://localhost:8000/todos')
+        fetch(' http://localhost:3001/todos')
         .then(response => response.json())
         .then(data => setTodos(data))
         .catch(error => console.error(error))
@@ -13,15 +13,20 @@ function Todos(){
 
     const handleAddTodo = event => {
         event.preventDefault();
-        fetch('http://localhost:8000/todos', {
+        console.log('Adding todo:', todo);
+        fetch(' http://localhost:3001/todos', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
           },
-          body: JSON.stringify({ todo })
+          body: JSON.stringify({ 
+            title: todo,
+            completed: false 
+        })
         })
           .then(response => response.json())
           .then(data => {
+            console.log('Todo added:', data);
             setTodos([...todos, data]);
             setTodo('');
           })
@@ -39,7 +44,12 @@ function Todos(){
           onChange={event => setTodo(event.target.value)}
         />
         <button>Add</button>
-      </form>
+        </form>
+        <ul>
+            {todos.map(todo => (
+            <li key={todo.id}>{todo.title}</li>
+            ))}
+        </ul>
         </div>
     )
 

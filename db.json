@@ -1,0 +1,24 @@
+{
+  "todos": [
+    {
+      "id": 1,
+      "title": "Create Todo App",
+      "completed": false
+    },
+    {
+      "id": 2,
+      "title": "Learn React",
+      "completed": false
+    },
+    {
+      "id": 3,
+      "title": "Learn Node.js",
+      "completed": true
+    },
+    {
+      "title": "Add a Todo",
+      "completed": false,
+      "id": 4
+    }
+  ]
+}
