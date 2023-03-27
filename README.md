@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+# TODO GEN
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Table of Content
+1. [Intro](#Intro)
+2. [Requirements](#requirements)
+3. [Project Setup](#project-setup)
+4. [Authors](#author)
+5. [License](#license)
 
-In the project directory, you can run:
 
-### `npm start`
+## Intro 
++ **Welcome to Masus Todo List Generator App.**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
++ **This app was designed to help users effectively manage their tasks. Originally created by Masu for his own use, it has since been passed down to others in need of organization.**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Requirements
 
-### `npm run build`
+Create a react app with the following MVPs
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Create a User
+2. A Login Page
+3. Create a Todo
+4. Read a List of Todos
+5. Update a Todo
+6. Delete a Todo
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+NB: <code>npm install create-react-app@latest app-name</code> was used to install the latest version of react
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Project Setup
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+To access this project on you local computer, follow the steps below
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. Open your terminal
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+2. Clone this repository: 
+        run <code>git clone (https://github.com/OyakiMasu/Todo-Gen)</code>
 
-## Learn More
+3. Change directories
+        run <code>cd task-gen</code>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+4. Open VS Code
+        run <code>code . </code>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+5. Install node packages
+    <code>npm install</code>
 
-### Code Splitting
+6. Start local host server
+    - <code>npm start</code>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+## User Stories
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+1. A user can either register or login for authentication
+2. Upon authentication, a user is navigated to a todos page
+3. Todos page shows a list of all todos, a new todo form and a logout button
+4. A user can add, delete and edit a todo
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+# Author
 
-### Advanced Configuration
+This project was contributed to by: 
+* [Zaki Mathu](https://github.com/OyakiMasu/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+# License
 
-### Deployment
+* This project is licensed under MIT License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
