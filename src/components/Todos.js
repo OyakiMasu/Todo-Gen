@@ -46,6 +46,28 @@ function Todos(){
         .catch(error => console.error(error));
     };
 
+    // Update A Todo
+    const handleUpdateTodo = (id, updatedTodo) => {
+        fetch(`http://localhost:3001/todos/${id}`,{
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(updatedTodo)
+        })
+        .then(response => response.json())
+        .then(data => {
+            const updatedTodos = todos.map(todo => {
+                if(todo.id === data.id){
+                    return data;
+                }
+                    return todo;
+            });
+            setTodos(updatedTodos);
+        })
+        .catch(error => console.error(error));
+    };
+    
     return (
         <div className="todos">
             <h1>Todo List</h1>
@@ -61,12 +83,11 @@ function Todos(){
         <ul>
             {todos.map(todo => (
             <li key={todo.id}>{todo.title}
-            {/* <input
+            <input
             type="checkbox"
             checked={todo.completed}
             onChange={() => handleUpdateTodo(todo.id, { ...todo, completed: !todo.completed })}
-          /> */}
-        {todo.todo}
+          />
         <button onClick={() => handleDeleteTodo(todo.id)}>Delete</button>
           </li>
             ))}
