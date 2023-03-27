@@ -29,6 +29,11 @@
       "title": "Delete a Todo",
       "completed": false,
       "id": 6
+    },
+    {
+      "title": "create a user",
+      "completed": false,
+      "id": 7
     }
   ]
 }
